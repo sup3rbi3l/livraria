@@ -9,9 +9,8 @@ def main():
     while True:
         usuario_selecionado = sdc.mostraClientes(todosClientes)
 
-        if usuario_selecionado == (len(todosClientes)+1):
+        if usuario_selecionado == (len(todosClientes) + 1):
             break
-
 
         elif usuario_selecionado != None:
             escolha = sdc.oqueFara(usuario_selecionado)
