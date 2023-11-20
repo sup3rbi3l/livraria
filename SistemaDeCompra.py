@@ -216,16 +216,21 @@ class SistemaDeCompra:
     
     def ver_informaçoes_livros(usuario_selecionado,todos_usuarios):
         print(todos_usuarios[usuario_selecionado]['nome'])
-        
+
         for i in range(len(todos_usuarios[usuario_selecionado]['compras']['livros'])):
             print('=============================')           
             print('Livro:',todos_usuarios[usuario_selecionado]['compras']['livros'][i])
             print('ISBN:',todos_usuarios[usuario_selecionado]['compras']['ISBN'][i])            
             print('Data comprado:',todos_usuarios[usuario_selecionado]['compras']['data'][i]) 
             print('=============================')
+            
+        if len(todos_usuarios[usuario_selecionado]['compras']['livros']) == 0:
+            print('=============================') 
+            print('Não comprou livros ainda!!')
+            print('=============================') 
         input('(precione enter para continuar)')
             
-            
+        
     def ver_informaçoes(usuario_selecionado,todos_usuarios):
         cpf_cnpj = 0
         try:
